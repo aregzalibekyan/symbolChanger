@@ -1,0 +1,113 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+body {
+    background-color: white;
+    color:black;
+}
+main , .forms {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+main {
+    height:100vh;
+    
+}
+
+.forms {
+    background-color: white;
+    padding:50px;
+    border-radius: 25px;
+    border:1px solid black;
+}
+@keyframes anim {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: green;
+    }
+    
+}
+@keyframes anim1 {
+    0% {
+        background-color: green;
+    }
+    100% {
+        background-color: white;
+    }
+}
+.forms input {
+    margin:10px;
+    width:100%;
+    text-align:left;
+    padding:10px 5px 10px 5px;
+    border:none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background-color: white;
+}
+.buts {
+    cursor:pointer; 
+    border-radius: 10px;
+}
+.buts:hover {
+    animation-duration: 1s;
+    animation-name:anim;
+    background-color: green;
+}
+.buts:not(:hover) {
+    animation-duration: 1s;
+    animation-name:anim1;
+    background-color:white;
+}
+li {
+    list-style: none;
+    display:flex;
+    align-items:center;
+}
+li input {
+    margin-right:10px;
+}
+/* @keyframes anim3 {
+    0% {
+        justify-content: flex-start;
+    }
+    100% {
+        transform: translateX(30px);
+    }
+}
+@keyframes anim4 {
+    0% {
+        justify-content: flex-end;
+    }
+    100% {
+        transform: translateX(-30px);
+    }
+} */
+.modes {
+    width:70px;
+    height:30px;
+    background-color: gray;
+    border-radius: 25px;
+    border:1px solid black;
+    padding:20px 10px 20px 10px;
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    
+}
+.circle {
+    display:flex;
+    width:20px;
+    height:20px;
+    background-color:black;
+    border-radius:30px;
+    cursor: pointer;
+}

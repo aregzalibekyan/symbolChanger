@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+    />
+    <title>App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="modes">
+        <span class="circle" ></span>
+            <img />
+        </div>
+      </div>
+      <br />
+      <div class="forms">
+        <input type="text" placeholder="Type folder address" id="path" />
+        <input type="button" onclick="handleClick()" value="Submit" class="buts"/>
+        <input type="text" placeholder="Type the symbol(s) to change" id="name" />
+        <input type="text" placeholder="Type to rename symbol(s) in selected files" id="newName"/>
+        <input type="button" onclick="send()" value="Submit" class="buts" />
+      </div>
+      
+      <% if (files.length > 0) { %>
+        <ul>
+          <% files.forEach(elem => { %>
+            <li>
+              
+              <input type='checkbox' id="check" class="check" name="check" value="<%= elem %>"/>
+              <label for="check" name="label1"><%= elem %></label>
+            </li>
+          <% }) %>
+        </ul>
+      <% } else { %>
+        <p>No files found.</p>
+      <% } %>
+      <p><%= message ? message : "" %></p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
